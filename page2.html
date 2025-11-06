@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Career Goals | My Portfolio">
+    <title>Career Goals | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👤</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Academic Results ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="year1.html">Year 1 Results</a></li>
+                            <li><a href="year2.html">Year 2 Results</a></li>
+                            <li><a href="year3.html">Year 3 Results</a></li>
+                            <li><a href="year4.html">Year 4 Results</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page1.html">My Hobbies</a></li>
+                    <li><a href="page2.html">Career Goals</a></li>
+                    <li><a href="index.html" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>My Career Goals</h2>
+        
+        <div class="career-timeline">
+            <div class="timeline-item">
+                <h3>Short-term Goals (1-2 years)</h3>
+                <ul>
+                    <li>Secure a position as a Full-Stack Developer at a tech company</li>
+                    <li>Master React.js and Node.js frameworks</li>
+                    <li>Contribute to open-source projects</li>
+                    <li>Build a professional network in the tech industry</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Medium-term Goals (3-5 years)</h3>
+                <ul>
+                    <li>Advance to Senior Developer or Team Lead position</li>
+                    <li>Specialize in AI and Machine Learning integration</li>
+                    <li>Mentor junior developers</li>
+                    <li>Speak at tech conferences</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Long-term Goals (5+ years)</h3>
+                <ul>
+                    <li>Become a Technical Architect or CTO</li>
+                    <li>Start my own tech company</li>
+                    <li>Teach programming part-time</li>
+                    <li>Contribute to educational technology initiatives</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="skills-section">
+            <h3>Skills Development Plan</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>Advanced JavaScript & TypeScript</li>
+                        <li>Cloud Computing (AWS, Azure)</li>
+                        <li>DevOps & CI/CD</li>
+                        <li>Machine Learning Fundamentals</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <ul>
+                        <li>Leadership & Team Management</li>
+                        <li>Public Speaking</li>
+                        <li>Project Management</li>
+                        <li>Strategic Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="home.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        // Logout functionality
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

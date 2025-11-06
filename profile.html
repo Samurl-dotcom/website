@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile | My Portfolio">
+    <title>Profile | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👤</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Academic Results ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="year1.html">Year 1 Results</a></li>
+                            <li><a href="year2.html">Year 2 Results</a></li>
+                            <li><a href="year3.html">Year 3 Results</a></li>
+                            <li><a href="year4.html">Year 4 Results</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page1.html">My Hobbies</a></li>
+                    <li><a href="page2.html">Career Goals</a></li>
+                    <li><a href="index.html" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Academic Profile</h2>
+        
+        <div class="profile-summary">
+            <h3>Academic Summary</h3>
+            <p>I am a dedicated Computer Science student with a strong academic record. Throughout my studies, I've maintained a high GPA while actively participating in coding competitions and hackathons. My coursework has provided me with a solid foundation in algorithms, data structures, web development, and database management.</p>
+        </div>
+        
+        <div class="results-table">
+            <h3>Academic Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Structures & Algorithms</td>
+                        <td>92%</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>95%</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Database Management</td>
+                        <td>88%</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>90%</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>Software Engineering</td>
+                        <td>93%</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="achievements">
+            <h3>Academic Achievements</h3>
+            <ul>
+                <li>Dean's List for Academic Excellence (2021-2023)</li>
+                <li>First Place in University Coding Competition (2022)</li>
+                <li>Published research paper on Machine Learning Applications</li>
+                <li>Completed internship at Tech Solutions Inc.</li>
+            </ul>
+        </div>
+        
+        <div class="back-home">
+            <a href="home.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        // Logout functionality
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

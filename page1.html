@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Hobbies | My Portfolio">
+    <title>My Hobbies | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👤</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Academic Results ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="year1.html">Year 1 Results</a></li>
+                            <li><a href="year2.html">Year 2 Results</a></li>
+                            <li><a href="year3.html">Year 3 Results</a></li>
+                            <li><a href="year4.html">Year 4 Results</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page1.html">My Hobbies</a></li>
+                    <li><a href="page2.html">Career Goals</a></li>
+                    <li><a href="index.html" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>My Hobbies & Interests</h2>
+        
+        <div class="hobby-section">
+            <div class="hobby-card">
+                <img src="images/photography.jpg" alt="Photography">
+                <h3>Photography</h3>
+                <p>I enjoy capturing moments through my camera lens, especially landscapes and urban architecture. Photography helps me appreciate the beauty in everyday life and has taught me patience and attention to detail.</p>
+            </div>
+            
+            <div class="hobby-card">
+                <img src="images/hiking.jpg" alt="Hiking">
+                <h3>Hiking</h3>
+                <p>Exploring nature trails and mountains is my way of staying active and connecting with the outdoors. I've completed several challenging hikes over the years, including the Appalachian Trail sections.</p>
+            </div>
+            
+            <div class="hobby-card">
+                <img src="images/cooking.jpg" alt="Cooking">
+                <h3>Cooking</h3>
+                <p>Experimenting with new recipes and cuisines is both relaxing and rewarding. I particularly enjoy preparing Italian and Asian dishes, and I'm always looking for opportunities to learn new cooking techniques.</p>
+            </div>
+        </div>
+        
+        <div class="multimedia-section">
+            <h3>My Photography Journey</h3>
+            <audio controls>
+                <source src="audio/photography-journey.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p class="audio-note">Note: Replace this with your actual audio recording about your photography journey.</p>
+        </div>
+        
+        <div class="back-home">
+            <a href="home.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        // Logout functionality
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
